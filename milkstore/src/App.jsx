@@ -1,23 +1,22 @@
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home/Home';
+import Navbar from './components/Navbar';
+import { useEffect } from 'react';
 
 const App = ()=>{
-  const name = 'kishore'
-
+ 
 
   return (
-<div>
+    <BrowserRouter>
+    <Navbar/>
 
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <Routes>
+      <Route path='/' element={<Home />}/>
+    </Routes>
+    </BrowserRouter>
 
-
-
-
-
-</div>
 
   );
 }
